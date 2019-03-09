@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {% if questions %}
+        <ol>
+            {% for question in questions %}
+                <h3></h3>
+
+                <div class="resize">
+                <li><a href={% url 'view-single' question.id %}>{{ question.question_text }}</a></li>
+                </div>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h1><b>NO QUESTION AVAILABLE</b></h1>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Add a question</h1>
+
+    <form method='POST'> {% csrf_token %}
+        <h2>Eg: Which movie to see this Friday 03/02/2019?</h2>
+        <p><b>Question</b></p>
+        {{ form.question_text}}
+        <p><b>Published Date</b></p>
+        {{ form.pub_date}}
+        <p></p>
+        <input id='Submit' type='submit' value='Submit'/>
+    </form>
+
+    {% if error %}
+      <script>
+        alert('That question already exists. Please choose another one :( ')
+      </script>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1><b>{{ question }}</b></h1>
+    {% if choices %}
+        <h2><b>THE CHOSEN ONE: {{result}}</b></h2>
+        <fieldset style="width:1000px">
+            {% for choice in choices %}
+                <p>
+                {{choice.choice_text}} - {{choice.percent}}%
+                </p>
+                <progress id="progressBar" max="100" value="{{choice.percent}}">
+                </progress>
+            {% endfor %}
+        </fieldset>
+    {% else %}
+        <h1><b>No choice available.</b></h1>
+    {% endif %}
+{% endblock %}

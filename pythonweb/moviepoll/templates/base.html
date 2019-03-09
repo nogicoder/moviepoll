@@ -1,0 +1,121 @@
+<DOCTYPE html>
+<html>
+    <!-- Styles -->
+    <style>
+        body
+        {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+            ),
+            url('https://i.imgur.com/UVWXBos.jpg');
+        background-position: 0% 0%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        h1 {
+        font: 100 3em sans-serif;
+        font-size: 6vw;
+        color: white;
+        text-decoration: blink;
+        text-align: center;
+        }
+
+        .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        a:link, a:visited {
+        background-color: #D42A2A;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        }
+
+        h2 {
+        font: 100 3em sans-serif;
+        color: red;
+        text-decoration: blink;
+        text-align: center;
+        }
+        .resize {
+        font-size: 1em;
+        font-family: sans-serif;
+        transition: width 0.5s , font-size 0.5s ;
+        }
+        .resize:hover {
+        font-size: 2em;
+        font-weight: bold;
+        }
+
+        img {
+        width: 150px;
+        }
+
+        .button {
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 30px;
+        }
+
+        progress {
+            width:190px;
+            height:50px;
+            border: 0;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+        }
+        progress::-webkit-progress-bar {
+            height:30px;
+            width:150px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow:0px 0px 6px #777 inset;
+        }
+        progress::-webkit-progress-value {
+            height:30px;
+            background: red;
+            border-radius: 15px;
+            box-shadow:0px 0px 6px #777 inset;
+        }
+        p {
+        font: 80 2em sans-serif;
+        color: red;
+        }
+        .alignleft {
+            float: left;
+        }
+        .alignright {
+            float: right;
+        }
+    </style>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Intek Movie Friday Poll</title>
+        
+        <div class="center">
+        <div align=center>
+        <img src="https://www.internship.edu.vn/wp-content/uploads/intek-institute-of-applied-technology-logo.png" alt="Intek">
+        <h2><a href='../'>Back to Previous Page</a></h2>
+        </div>
+        </div>
+    </head>
+
+    <body>
+    <div class="center">
+    <div align=center>
+    {% block content %}
+    replace me
+    {% endblock %}
+    </div>
+    </div>
+    </body>
+<html>

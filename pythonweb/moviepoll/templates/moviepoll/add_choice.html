@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Add a Choices</h1>
+    <form method='POST'> {% csrf_token %}
+        <h2>Enter Your Choice Below</h2>
+        {{ form.choice_text }}
+        {{ form.votes.as_hidden  }}
+        {{ form.percent.as_hidden }}
+        <input id='Submit' type='submit' value='Submit'/>
+    </form>
+
+    {% if error %}
+      <script>
+        alert('That choice already exists. Please choose another one :( ')
+      </script>
+    {% endif %}
+
+{% endblock %}

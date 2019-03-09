@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1><b>{{ question }}</b></h1>
+    {% if choices %}
+        {% for choice in choices %}
+            <h2>{{choice.choice_text}} - Vote: {{choice.votes}}</h2>
+        {% endfor %}
+    {% else %}
+        <h1><b>No choice available.</b></h1>
+    {% endif %}
+        <div class="resize">
+        <p><a href={% url 'add-choice' question.id %}>Add choices</a></p>
+        </div>
+        <div class="resize">
+        <p><a href={% url 'add-vote' question.id %}>Click to vote</a><p>
+        </div>
+        <div class="resize">
+        <p><a href={% url 'results' question.id %}>View results</a><p>
+        </div>
+{% endblock %}
